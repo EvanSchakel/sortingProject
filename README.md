@@ -38,5 +38,5 @@ implementation will replace this starter behavior as the project develops.
 4. Push the branch and open a pull request.
 5. Merge only after the compile check passes.
 
-This workflow keeps the project history easy to review and demonstrates
-incremental problem-solving to internship and co-op recruiters.
+This workflow keeps the project history organized and makes each change easy
+to review.
