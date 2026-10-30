@@ -1,0 +1,14 @@
+# Java build output
+bin/
+out/
+*.class
+
+# VS Code and OS files
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# IDE metadata
+.idea/
+*.iml
