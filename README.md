@@ -1,42 +1,35 @@
-# Project 02: Word Frequency
+# EECS 2500 - Project 2: Word Frequency Lists
 
-This project explores linear data structures by building a word-frequency
-program with five list implementations. It is part of my Linear Data
-Structures coursework and will be developed incrementally as the assignment
-progresses.
-
-## Project layout
-
-```text
-src/       Java source files
-lib/       Optional third-party libraries
-bin/       Local compiler output (ignored by Git)
-```
+Evan Schakel  
+Due: Sunday, November 15, 2026 @ 11:59 PM  
 
 ## Requirements
 
-- Java Development Kit (JDK) 17 or newer
+- Main class: `MainClass` (in `src/MainClass.java`)
+- Default package only (no `package` statements)
+- No `module-info.java`
+- Input file passed via command line (`args[0]`)
+- Submission format: `2500-Schakel, Evan.7z`
 
-## Build and run
+## Files
 
-From the project root:
+- `src/MainClass.java`: Entry point and 7-pass driver
+- `src/ListInterface.java`: Required list interface
+- `src/BaseList.java`: Abstract base class with common fields
+- `src/LLNode.java`: Singly linked list node
+- `src/List1.java`: Unsorted (front insertion)
+- `src/List2.java`: Sorted alphabetically
+- `src/List2A.java`: Sorted with previous search pointer (POLI)
+- `src/List3.java`: Self-adjusting (move to front)
+- `src/List4.java`: Self-adjusting (move by one)
+
+## Compile & Run
 
 ```bash
-mkdir -p bin
-javac -d bin src/lab2FiveLists.java
-java -cp bin lab2FiveLists
+javac -d bin src/*.java
+java -cp bin MainClass Hamlet.txt
 ```
 
-The current starter program prints `Hello, World!`. The word-frequency
-implementation will replace this starter behavior as the project develops.
+## Packaging
 
-## Development workflow
-
-1. Create a focused branch from `main`.
-2. Make and test one logical change.
-3. Commit with a clear message.
-4. Push the branch and open a pull request.
-5. Merge only after the compile check passes.
-
-This workflow keeps the project history organized and makes each change easy
-to review.
+Run `./package_submission.sh` to generate `2500-Schakel, Evan.7z`.

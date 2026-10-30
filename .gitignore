@@ -9,6 +9,9 @@ out/
 !.vscode/settings.json
 !.vscode/extensions.json
 
-# IDE metadata
+# Archives
+*.7z
+*.zip
+*.tar.gz
 .idea/
 *.iml

@@ -25,4 +25,4 @@ jobs:
       - name: Compile
         run: |
           mkdir -p bin
-          javac -d bin src/lab2FiveLists.java
+          javac -d bin src/*.java
