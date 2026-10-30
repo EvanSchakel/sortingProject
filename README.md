@@ -1,5 +1,6 @@
-# EECS 2500 - Project 2: Word Frequency Lists
+# sortingProject
 
+EECS 2500 - Word Frequency Lists  
 Evan Schakel  
 Due: Sunday, November 15, 2026 @ 11:59 PM  
 
