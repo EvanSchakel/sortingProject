@@ -4,26 +4,43 @@ public abstract class BaseList implements ListInterface {
     long keyCompare;
 
     public BaseList() {
-
+this.list = null;
+this.refChanges = 0;
+this.keyCompare = 0;
     }
 
     @Override
     public long getRefChanges() {
-        return 0;
+        return refChanges;
     }
 
     @Override
     public long getKeyCompare() {
-        return 0;
+        return keyCompare;
     }
 
     @Override
     public int getDistinctWords() {
-        return 0;
+LLNode curr = list;
+        int count = 0;
+
+while(curr!= null){
+    count++;
+    curr = curr.getNext();
+}
+ return count;
     }
 
     @Override
     public int getTotalWords() {
-        return 0;
+        int total = 0;
+LLNode curr = list;
+while ( curr != null){
+
+total = total + curr.getCount();
+    curr = curr.getNext();
+}
+
+        return total;
     }
 }
