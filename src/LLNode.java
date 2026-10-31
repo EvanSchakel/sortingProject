@@ -4,41 +4,44 @@ public class LLNode {
     private LLNode next;
 
     public LLNode(String word) {
-        // TODO: assign word, initialize count to 1, set next to null
+        this.word = word;
+        this.count = 1;
+        this.next = null;
     }
 
     public LLNode(String word, LLNode next) {
-        // TODO: assign word, initialize count to 1, assign next
+        this.word = word;
+        this.count = 1;
+        this.next = next;
     }
 
     public String getWord() {
-        // TODO: return word
-        return null;
+        return word;
+
+
     }
 
     public void setWord(String word) {
-        // TODO: set this.word to word
+        this.word = word;
     }
 
     public int getCount() {
-        // TODO: return count
-        return 0;
+        return count;
     }
 
     public void setCount(int count) {
-        // TODO: set this.count to count
+        this.count = count;
     }
 
     public void incrementCount() {
-        // TODO: increase count by 1
+        count++;    
     }
 
     public LLNode getNext() {
-        // TODO: return next
-        return null;
+        return next;
     }
 
     public void setNext(LLNode next) {
-        // TODO: set this.next to next
-    }
+        this.next = next;    
+}
 }
