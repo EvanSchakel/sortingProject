@@ -7,5 +7,6 @@ public class List1 extends BaseList {
     @Override
     public void add(String word) {
 
+        
     }
 }

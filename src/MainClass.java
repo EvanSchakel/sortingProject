@@ -1,13 +1,13 @@
+import java.util.LinkedList;
+
 public class MainClass {
 
     public static void main(String[] args) {
-        //in class 11/02/2026
+LinkedList<String> linkedList = new LinkedList<String>();
 
-        //Lecture 11 Searching and Sorting
+int [] x = {0, 2, 4, 6, 8};
+System.out.println(x.length / 2);
 
-        //mergesort
-        //quicksort
-        
     }
 
 }
