@@ -1,36 +1,41 @@
-# sortingProject
+# Word Frequency Analyzer
 
-EECS 2500 - Word Frequency Lists  
-Evan Schakel  
-Due: Sunday, November 15, 2026 @ 11:59 PM  
+This project reads a text file, tracks how often each word appears, and compares several linked-list approaches for storing and finding words.
 
-## Requirements
+Each approach records useful performance data, including:
 
-- Main class: `MainClass` (in `src/MainClass.java`)
-- Default package only (no `package` statements)
-- No `module-info.java`
-- Input file passed via command line (`args[0]`)
-- Submission format: `2500-Schakel, Evan.7z`
+- Number of unique words
+- Total word count
+- Word comparisons
+- Reference changes
+- Processing time
 
-## Files
+The results show how different data structures and search strategies affect performance when working with text data.
 
-- `src/MainClass.java`: Entry point and 7-pass driver
-- `src/ListInterface.java`: Required list interface
-- `src/BaseList.java`: Abstract base class with common fields
-- `src/LLNode.java`: Singly linked list node
-- `src/List1.java`: Unsorted (front insertion)
-- `src/List2.java`: Sorted alphabetically
-- `src/List2A.java`: Sorted with previous search pointer (POLI)
-- `src/List3.java`: Self-adjusting (move to front)
-- `src/List4.java`: Self-adjusting (move by one)
+## Project Structure
 
-## Compile & Run
+- `src/MainClass.java`: Reads the input file, runs the analysis, and displays results
+- `src/ListInterface.java`: Defines the shared list operations and performance metrics
+- `src/BaseList.java`: Provides common list fields and reporting methods
+- `src/LLNode.java`: Represents a word, its count, and its next link
+- `src/List1.java`: Unsorted list with new words added to the front
+- `src/List2.java`: Alphabetically sorted list
+- `src/List2A.java`: Sorted list with an optimized search starting point
+- `src/List3.java`: Self-adjusting list that moves repeated words to the front
+- `src/List4.java`: Self-adjusting list that moves repeated words forward one position
+
+## Running the Project
+
+Compile the source files:
 
 ```bash
 javac -d bin src/*.java
+```
+
+Run the analyzer with a text file:
+
+```bash
 java -cp bin MainClass Hamlet.txt
 ```
 
-## Packaging
-
-Run `./package_submission.sh` to generate `2500-Schakel, Evan.7z`.
+The input file can be replaced with any other text file.
