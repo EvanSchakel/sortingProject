@@ -22,8 +22,10 @@ else{
     
 
        LLNode newNode = new LLNode(word);
-newNode.setNext(list);
-list = newNode;
+newNode.setNext(list); //ref change
+refChanges++;
+
+list = newNode; //ref change
 refChanges++;
 
 }
