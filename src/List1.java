@@ -14,8 +14,7 @@ if(current.getWord().equals(word)){
 current.incrementCount();
 return;
 }
-else{
-    current = current.getNext();
+else{ current = current.getNext();
 }
 
 }
