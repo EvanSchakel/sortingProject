@@ -14,14 +14,17 @@ if(current.getWord().equals(word)){
 current.incrementCount();
 return;
 }
-else(){
-current = current.getNext();
+else{
+    current = current.getNext();
 }
 
-
-
 }
-        
-    }
+    
+
+       LLNode newNode = new LLNode(word);
+newNode.setNext(list);
+list = newNode;
+refChanges++;
+
 }
 }
