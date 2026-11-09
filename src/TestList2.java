@@ -1,7 +1,7 @@
 public class TestList2{
 public static void main(String [] args){
 
-List1 list = new List2();
+List2 list = new List2();
 
 list.add("cat");
 list.add("dog");
@@ -10,12 +10,7 @@ list.add("qwerty");
 list.add("Squivvle");
 list.add("I't");
 
-long q = 1000000000;
-for( int i = 0 ; i < q; i++){
 
-    list.add("hi");
-
-}
 
 
 
