@@ -7,6 +7,24 @@ public class List2A extends BaseList {
 
     @Override
     public void add(String word) {
+LLNode current;
+LLNode previous;
+
+if (lastNode == null){
+    current = list;
+    previous = null;
+}
+else if(word.compareTo(lastNode.getWord()) < 0){
+current = list;
+    previous = null;
+
+}
+else{
+
+    current = lastNode;
+    previous = lastNode;
+}
+
 
     }
 }
