@@ -1,58 +1,71 @@
-public class LLNode {
-    private String word;
-    //stores the word in this node
-    private int count;
-//how many time the word appears
-    private LLNode next;
-    //points to the next node in list
+/*
+ * LLNode.java - Evan Schakel (11/10/2026)
+ * Node class used by all 5 word frequency lists.
+ * Holds a word string, its frequency counter, and the pointer to the next node.
+ */
 
-    public LLNode(String word) {
-        //constructor that recives in a word when creating a node
+public class LLNode
+{
+    private String word;  //stores the word in this node
+    private int count;    //how many times the word appears
+    private LLNode next;  //points to the next node in list
+
+    //constructor that takes in a word, starts count at 1 and next at null
+    public LLNode(String word)
+    {
         this.word = word;
-        //passses in the word we use
         this.count = 1;
-        //starts with a count of 1/because its the first occurence of that word
         this.next = null;
-        //there is no next node, list later connects it to newNode.setNext(list)
     }
 
-    public LLNode(String word, LLNode next) {
-        //using LLNode contsurctor again, passes in a string and then we call next(next as in the next data)
+    // 2-arg constructor when we already know what node comes right after it
+    // sets word, starts count at 1, and links next to the passed-in node
+    public LLNode(String word, LLNode next)
+    {
         this.word = word;
-        //we say that word we pass in is this word
         this.count = 1;
-        //count is now 1 sicne the word got sucesfully passed in
         this.next = next;
-        //calling for the next node to be ready for the next string
     }
 
-    public String getWord() {
+    //returns the word saved in this node
+    public String getWord()
+    {
         return word;
-
-
     }
 
-    public void setWord(String word) {
+    // overwrites the node's stored word string
+    public void setWord(String word)
+    {
         this.word = word;
     }
 
-    public int getCount() {
+    // returns how many times this node's word has been seen
+    public int getCount()
+    {
         return count;
     }
 
-    public void setCount(int count) {
+    //lets callers set the count directly
+    public void setCount(int count)
+    {
         this.count = count;
     }
 
-    public void incrementCount() {
-        count++;    
+    // bumps the frequency count by 1 whenever the same word shows up again
+    public void incrementCount()
+    {
+        count++;
     }
 
-    public LLNode getNext() {
+    // grabs the next node reference in the chain
+    public LLNode getNext()
+    {
         return next;
     }
 
-    public void setNext(LLNode next) {
-        this.next = next;    
-}
+    //updates the link pointing to the next node
+    public void setNext(LLNode next)
+    {
+        this.next = next;
+    }
 }
